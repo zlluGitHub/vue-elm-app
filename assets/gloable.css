@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    
+    font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+  }
+  h1,p{
+      margin: 0px;
+  }
+  ul{
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+  }
+  a {
+    text-decoration: none;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
