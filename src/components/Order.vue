@@ -77,6 +77,7 @@
           </div>
         </div>
         <OrderList/>
+        <PopUp/>
     </div>
 </template>
 <script>
@@ -85,7 +86,7 @@ import Bscroll from 'better-scroll' ;
 export default { 
     name:'order',
     components: {
-        OrderList,
+        OrderList
     },
     mounted() { 
         this.$nextTick(() => { 
@@ -94,7 +95,6 @@ export default {
             element.style.width= element.children.length*liWidth+'px';
             new Bscroll(this.$refs.wrapper, {
                 scrollX:true,
-                scrollY:false
             }) 
         })     
     }
@@ -107,9 +107,11 @@ export default {
     margin: 0px;
     margin-top: 12px;
     .badder{
-        padding: 0px 20px;
+        padding: 0px 30px;
     }
     .badder img{
+        display: block;
+        border-radius: 12px;
         width: 100%;
         
     }
@@ -117,7 +119,7 @@ export default {
         color: #333;
         font-size: 30px;
         font-weight: 700;
-        padding: 20px;
+        padding: 30px;
     }
     .recommend-wrap{
         margin-bottom: 24px;

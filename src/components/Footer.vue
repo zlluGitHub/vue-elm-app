@@ -18,11 +18,16 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-
-   
     background-color: #fff;
+    z-index: 1;
     .footer-top{
+        background-color: #fffad6;
         text-align: center;
+        span{
+            display: block;
+            padding: 8px;
+            font-size: 20px;
+        }
     }
     .inner{
         display: flex;
@@ -51,11 +56,12 @@
                 position: absolute;
                 display: block;
                 left: 30px;
-                top: -22px;
-                width: 90px;
-                height: 90px;
+                top: -30px;
+                width: 100px;
+                height: 100px;
                 border-radius: 100px;
                 background : #3190e8;
+                border: 1.333333vw solid #444;
                 box-shadow: 0 -0.8vw 0.533333vw 0 rgba(0,0,0,.1);
                 img{
                     padding: 15px;
@@ -66,10 +72,9 @@
                     position: absolute;
                     display: block;
                     right: 0px;
-                    top: 0px;
-                    width: 35px;
-                    
-                    padding: 1px 5px;
+                    top: -10px;
+                    font-style: normal;
+                    padding: 3px 7px;
                     font-size: 20px;
                     color: #fff;
                     border-radius: 12px;

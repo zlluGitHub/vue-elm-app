@@ -14,9 +14,24 @@
       </ul>
     </nav>
     <router-view></router-view>
-    
+    <PopUp/>
+    <Activity/>
+    <Coupon/>
   </div>
 </template>
+<script>
+import PopUp from './PopUp.vue';
+import Activity from './Activity.vue';
+import Coupon from './Coupon.vue';
+
+export default {
+  components:{
+    PopUp,
+    Activity,
+    Coupon
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .main {
@@ -24,6 +39,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+ 
   nav {
     width: 100%;
 

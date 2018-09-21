@@ -15,9 +15,9 @@
             <span>蜂鸟专送</span>
         </p>    
     </div>
-    <div class="favourable">
+    <div @click="onClose()" class="favourable">
         <span>￥7</span>
-        <span>无门鐦</span>
+        <span>无门槛</span>
         <span>领取</span>
     </div>
     <div class="fill-up">
@@ -37,7 +37,17 @@ export default {
   name: 'heade',
   props: {
     msg: String
-  }
+  },
+  data:{
+      active:false
+  },
+  methods:{
+        onClose(){  
+            this.active=true;
+            console.log(this.$store);
+            
+        }
+    }
 }
 </script>
 
@@ -46,13 +56,13 @@ export default {
      background-image: url('../../assets/img/head-bg.webp');
      background-size: cover;
      width: 100%;
-     height: 20vw;
+     height: 24vw;
     //  overflow: hidden;
      position: relative;
      img{
         position: absolute;
         width: 20vw;
-        top: 5vw;
+        top: 8vw;
         left: 40vw;
      }
 
@@ -61,14 +71,29 @@ export default {
     
      padding-top:6vw;
      .title-h1{
+         position: relative;
          display: flex;
          justify-content: center;
          h1{
              font-size: 5vw;
          }
+         i{
+             width: 20px;
+            content: "";
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 455px;
+            border-style: solid;
+            border-width: 1.466667vw 0 1.466667vw 1.733333vw;
+            border-color: transparent transparent transparent rgba(0,0,0,.67);
+            
+            left: 1.6vw;
+            top: 2.133333vw;
+         }
      }
      .message{
          display: flex;
+         margin: 12px 0px;
          justify-content: center;
          span{
              font-size: 3vw;
@@ -79,14 +104,36 @@ export default {
  .favourable{
      display: flex;
      font-size: 24px;
-     font-weight: bold;
      justify-content: center;
      margin-top: 5px;
+    span:nth-child(1){
+        font-weight: bold;
+      
+    }
     span{
-        
          padding: 1vw 3vw;
          color: #594519;
         background: #ffe578;
+         position: relative;
+    }
+    span:nth-child(2)::after{
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        right: -5px;
+        border-top: 1.5vw solid #fff;
+        border-left: 1.5vw solid transparent;
+        transform: rotate(-45deg);
+        z-index:2;
+    }
+    span:nth-child(3)::before{
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -5px;
+        border-top: 1.5vw solid #fff;
+        border-left: 1.5vw solid transparent;
+        transform: rotate(135deg);
     }
  }
  .fill-up{
