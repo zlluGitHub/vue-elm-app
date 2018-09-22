@@ -5,7 +5,7 @@
             </div>
         </transition>
         <transition name="action">
-            <div v-if="$store.state.status.ticketShow" class="inner">
+            <div v-if="$store.state.status.ticketShow" class="inner" @touchmove.prevent>
                     <h2>优惠活动</h2>
                     <span @click="onClose()"></span>
                     <p>超级用户特权<span>限超级用户兑换</span></p>

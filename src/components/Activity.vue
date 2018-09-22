@@ -5,7 +5,7 @@
     </div>
 </transition>
 <transition name="action">
-    <div class="inner"  v-if="$store.state.status.favourable">
+    <div class="inner"  v-if="$store.state.status.favourable" @touchmove.prevent>
             <h2>优惠活动</h2>
             <span @click.stop="onClose()"></span>
             <div class="warp">

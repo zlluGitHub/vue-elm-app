@@ -37,7 +37,8 @@ import $ from 'jquery';
 export default { 
     name:'order-list',
     data:()=>({
-        maxVal:1000
+       
+        arrt:[]
     }),
     computed: {
         goodsNameList() {
@@ -53,19 +54,19 @@ export default {
             const {aside,asideUl, list,warp,we} = this.$refs;             
             this.scrollBox(aside,asideUl);
             this.scrollBox(list,warp);
-            const as = warp.children[0]
+            // const as = warp.children[0]
             // console.log();
-            this.maxVal=warp.children[0].offsetHeight
-            // for (let index = 0; index < warp.children.length; index++) {
-            //      element += warp.children[index].offsetHeight
-            //     this.arrt.push(element+10);                
-            // }
+            // this.maxVal=warp.children[0].clientHeight
+            for (let index = 0; index < warp.children.length; index++) {
+                const element = warp.children[index].offsetHeight
+                this.arrt.push(element);                
+            }
             this.scroll.on('scrollEnd', pos => {     
-                console.log(-pos.y/this.maxVal);
+                // console.log(-pos.y/this.maxVal);
                          
-            //    this.$store.commit('changeStatus',{
-            //         active:this.getPsition(this.arrt,-pos.y)
-            //     })
+                this.$store.commit('changeStatus',{
+                    active:this.getPsition(this.arrt,-pos.y)
+                })
             })
         })  
         
@@ -91,10 +92,9 @@ export default {
         },
         getPsition(heightArrt,heightVal){
             for (let index = 1; index < heightArrt.length; index++) {
-                if (heightVal>heightArrt[0]) {
-                    if(heightVal>heightArrt[index-1]&&heightVal<heightArrt[index]) {
+                if (heightVal>heightArrt[0]-8) {
+                    if(heightVal<heightArrt[index-1]+heightArrt[index]-8) {
                         return index;
-                        break;
                     }else{
                         return index+1;
                         break;
