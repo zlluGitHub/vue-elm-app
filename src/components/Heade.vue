@@ -15,7 +15,7 @@
             <span>蜂鸟专送</span>
         </p>    
     </div>
-    <div @click="onClose()" class="favourable">
+    <div @click="onOpen()" class="favourable">
         <span>￥7</span>
         <span>无门槛</span>
         <span>领取</span>
@@ -42,10 +42,9 @@ export default {
       active:false
   },
   methods:{
-        onClose(){  
+        onOpen(){  
             this.active=true;
-            console.log(this.$store);
-            
+            console.log(this.$store.state.goods.goods);
         }
     }
 }

@@ -16,6 +16,9 @@ export default {
     Heade,
     Main,
     Footer
+  },
+  mounted() {
+    this.$store.dispatch('getGoods')
   }
 }
 </script>

@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 const state = {
   goods: []
 }
@@ -33,4 +31,4 @@ const goods = {
   getters
 }
 
-export default goods
+export default states
