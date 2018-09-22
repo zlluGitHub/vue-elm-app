@@ -1,8 +1,13 @@
 <template>
-    <div class="activity">
-        <div class="inner">
+<div>
+<transition name="mask">
+    <div class="activity" v-if="$store.state.status.favourable" @touchmove.prevent>
+    </div>
+</transition>
+<transition name="action">
+    <div class="inner"  v-if="$store.state.status.favourable">
             <h2>优惠活动</h2>
-            <span></span>
+            <span @click.stop="onClose()"></span>
             <div class="warp">
                 <ul>
                     <li><span>折扣</span>品质生活节5折优惠</li>
@@ -16,8 +21,25 @@
                 </ul>
             </div>
         </div>
-    </div>
+</transition>
+    
+   </div>     
+    
 </template>
+<script>
+export default {
+    name:'',
+    methods:{
+    
+        onClose(){  
+            this.$store.commit('changeStatus',{
+               favourable:false
+            })
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 .activity{
     position: fixed;
@@ -27,13 +49,15 @@
     height: 100%;
     background-color: rgba(0,0,0,.5);
     z-index: 100;
-    display: none;
-    .inner{
-        position: absolute;
+    display: flex;
+}
+.inner{
+        position: fixed;
         width: 100%;
         padding: 30px;
         bottom: 0px;
         background: #f5f5f5;
+        z-index: 120;
         h2{
             color: #000;
             font-size: 36px;
@@ -64,5 +88,4 @@
             }
         }
     }
-}
 </style>

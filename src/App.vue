@@ -5,7 +5,6 @@
     <Footer/>
   </div>
 </template>
-
 <script>
 import Heade from './components/Heade.vue'
 import Footer from './components/Footer.vue'
@@ -23,10 +22,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+
 #app {
   width: 100%;
   color: #2c3e50;
-   margin-bottom: 180px;
+   margin-bottom: 150px;
 }
 </style>

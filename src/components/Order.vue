@@ -77,16 +77,16 @@
           </div>
         </div>
         <OrderList/>
-        <PopUp/>
+       
     </div>
 </template>
 <script>
 import OrderList from './OrderList.vue';
 import Bscroll from 'better-scroll' ;
 export default { 
-    name:'order',
+    name:'orders',
     components: {
-        OrderList
+        OrderList,
     },
     mounted() { 
         this.$nextTick(() => { 
@@ -95,6 +95,7 @@ export default {
             element.style.width= element.children.length*liWidth+'px';
             new Bscroll(this.$refs.wrapper, {
                 scrollX:true,
+                click:true
             }) 
         })     
     }
@@ -106,6 +107,7 @@ export default {
 .order{
     margin: 0px;
     margin-top: 12px;
+    
     .badder{
         padding: 0px 30px;
     }

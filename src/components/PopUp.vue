@@ -1,20 +1,35 @@
 <template>
-    <div class="popup-box">
-        <div class="popup-inner">
-            <h2>叫了只炸鸡</h2>
-            <ul>
-                <li><p> 4.7 </p><span>评分</span></li>
-                <li><p>430单</p>  <span>评分</span></li>
-                <li><p>蜂鸟专送</p><span>评分</span></li>
-                <li><p>1元</p><span>评分</span></li>
-                <li><p>1.6Km</p> <span>评分</span></li>               
-            </ul>
-            <div><span>公告</span></div>
-            <p>欢迎光临，用餐高峰期请提前下单，谢谢。</p>
+    <transition name="mask">
+        <div class="popup-box" v-if="$store.state.status.popup" @touchmove.prevent>
+            <div class="popup-inner">
+                <h2>叫了只炸鸡</h2>
+                <ul>
+                    <li><p> 4.7 </p><span>评分</span></li>
+                    <li><p>430单</p>  <span>评分</span></li>
+                    <li><p>蜂鸟专送</p><span>评分</span></li>
+                    <li><p>1元</p><span>评分</span></li>
+                    <li><p>1.6Km</p> <span>评分</span></li>               
+                </ul>
+                <div><span>公告</span></div>
+                <p>欢迎光临，用餐高峰期请提前下单，谢谢。</p>
+            </div>
+            <span @click="onClose()"></span>
         </div>
-        <span></span>
-    </div>
+    </transition>
 </template>
+<script>
+export default {
+    name:'popup',
+    methods:{
+        onClose(){  
+            this.$store.commit('changeStatus',{
+               popup:false
+            })
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 .popup-box{
     position: fixed;
@@ -27,7 +42,7 @@
     align-items: center;
     background-color: rgba(0,0,0,.7);
     z-index: 100;
-    display: none;
+    display: flex;
     .popup-inner{
         width: 80%;
         background-color: #fff;
@@ -89,5 +104,14 @@
         margin-top:80px; 
         background: url('../../assets/img/qw1.webp') center center no-repeat;
     }
+}
+.mask-enter-active, .mask-leave-active {
+    // transform: scale(1);
+    opacity: 1;
+  transition: opacity .25s;
+}
+.mask-enter, .mask-leave-to {
+  opacity: 0;
+//   transform: scale(0);
 }
 </style>

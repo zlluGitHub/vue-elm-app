@@ -17,6 +17,7 @@
     <PopUp/>
     <Activity/>
     <Coupon/>
+    
   </div>
 </template>
 <script>
@@ -39,6 +40,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
  
   nav {
     width: 100%;

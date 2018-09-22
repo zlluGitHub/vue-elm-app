@@ -25,11 +25,11 @@
         </div>
         <div class="bottom">
             <div class="eav-action">
-                <p class="active">全部<span>199</span></p>
-                <p>满意<span>156</span></p>
-                <p class="no">不满意<span>5</span></p>
-                <p>有图<span>24</span></p>
-                <p>味道好<span>14</span></p>
+                <p @click="onActive('all')" :class="mark==='all'?'active':''">全部<span>199</span></p>
+                <p  @click="onActive('yes')" :class="mark==='yes'?'active':''">满意<span>156</span></p>
+                <p class="no" @click="onActive('no')" :class="mark==='no'?'active':''">不满意<span>5</span></p>
+                <p @click="onActive('hasImg')" :class="mark==='hasImg'?'active':''">有图<span>24</span></p>
+                <p @click="onActive('good')"  :class="mark==='good'?'active':''"> 味道好<span>14</span></p>
             </div>
             <div class="select">
                 <span></span>只看有内容的评论
@@ -58,6 +58,19 @@
         </div>
     </section>
 </template>
+<script>
+export default {
+    data:()=>({
+        mark:'all'
+    }),
+    methods:{
+        onActive(mark){
+             this.mark= mark;    
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 .evaluale{
     margin-bottom: 2.133333vw;

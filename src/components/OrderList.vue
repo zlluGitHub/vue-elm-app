@@ -1,148 +1,32 @@
 <template>
     <div class="order-list">
-        <aside ref="aside">
-            <ul class="asideUl" ref="asideUl">
-                <li><img src="../../assets/img/huo.webp" alt="dsf"  > <span>热销</span></li>
-                <li><img src="../../assets/img/er.webp" alt="df"> <span>优惠</span></li>
-                <li><span>扫一扫</span></li>
-                <li><span>叫了只炸鸡</span></li>
-                <li><span>鸡的零件</span></li>
-                <li><span>叫了个汉堡</span></li>
-                <li><span>饮品</span></li>
-                <li><span>叫鸡先看</span></li>
-                <li><span>套餐</span></li>
+        <aside ref="aside" >
+            <ul v-show="goodsNameList.length" class="asideUl" ref="asideUl">
+                <li v-for="(name,ind) in goodsNameList" :key="ind" @click="onAside(ind)" :class="$store.state.status.active===ind?'active':''">
+                    <img src="../../assets/img/huo.webp" alt="dsf"> 
+                    <span>{{name}}</span>
+                </li>
+                <!-- <li><img src="../../assets/img/er.webp" alt="df"> <span>优惠</span></li> -->
             </ul>
         </aside>
         <div class="list" ref="list">
             <div ref="warp">
-                <div class="select-content" ref="1">
-                    <h2>热销<span>美味又实惠, 大家快来抢!</span></h2>
+                <div v-for="item in goodsList" :key="item.id" class="select-content">
+                    <h2>{{item.name}}<span>美味又实惠, 大家快来抢!</span></h2>
                     <ul >
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
+                        <li v-for="goods in item.foods" :key="goods.id">
+                            <img :src="goods.icon" :alt="goods.name">
                             <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
+                                <h2>{{goods.name}}</h2>
+                               
+                                <p class="p-span"><span>月售{{goods.sellCount}}份</span><span>{{goods.rating}}%</span></p>
+                                <div><span>￥{{goods.price}}</span><span></span></div>
                                 
                             </div>
                         </li>
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        
                     </ul>
                 </div>
-                <div class="select-content" ref="2">
-                    <h2>优惠<span>美味又实惠, 大家快来抢!</span></h2>
-                    <ul >
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="select-content" ref="3">
-                    <h2>扫一扫<span>美味又实惠, 大家快来抢!</span></h2>
-                    <ul >
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="select-content">
-                    <h2>叫了只炸鸡<span>美味又实惠, 大家快来抢!</span></h2>
-                    <ul >
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        
-                    </ul>
-                </div>
-                <div class="select-content">
-                    <h2>鸡的零件<span>美味又实惠, 大家快来抢!</span></h2>
-                    <ul >
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div>
-                                
-                            </div>
-                        </li>
-                        <li>
-                            <img src="../../assets/img/c40d4jpeg.webp" alt="">
-                            <div>
-                                <h2>芝士爆浆鸡排</h2>
-                                <p>禁单点无主食不出餐</p>
-                                <p><span>月售60份</span><span>好评率100%</span></p>
-                                <div><span>￥9.86</span><span></span></div> 
-                            </div>
-                        </li>     
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -152,49 +36,88 @@ import Bscroll from 'better-scroll' ;
 import $ from 'jquery';
 export default { 
     name:'order-list',
-    data: () => ({
-        activeTabIndex: 0,
-        showDetail: null
+    data:()=>({
+        maxVal:1000
     }),
+    computed: {
+        goodsNameList() {
+            return this.$store.getters.goodsNameList;
+        },
+        goodsList() {
+            return this.$store.state.goods.goods;
+        }
+    },
     mounted() { 
-        const {aside,asideUl, list,warp,we} = this.$refs;             
+        
         this.$nextTick(() => { 
+            const {aside,asideUl, list,warp,we} = this.$refs;             
             this.scrollBox(aside,asideUl);
             this.scrollBox(list,warp);
+            const as = warp.children[0]
+            // console.log();
+            this.maxVal=warp.children[0].offsetHeight
+            // for (let index = 0; index < warp.children.length; index++) {
+            //      element += warp.children[index].offsetHeight
+            //     this.arrt.push(element+10);                
+            // }
+            this.scroll.on('scrollEnd', pos => {     
+                console.log(-pos.y/this.maxVal);
+                         
+            //    this.$store.commit('changeStatus',{
+            //         active:this.getPsition(this.arrt,-pos.y)
+            //     })
+            })
         })  
-        $('.asideUl li').each((index,ele)=>{
-            ele.onclick=()=>{
-                this.scroll.scrollToElement(warp.children[index], 500);
-                $('.asideUl li').removeClass("active");
-                $(ele).addClass("active");
-            }   
-        })
+        
     },
      methods:{
         onChangeScroll(activeTabIndex){
             const { we } = this.$refs;   
         },
         scrollBox(warp,warpInner){
-            this.scroll = new Bscroll(warp, {
+            this.scroll= new Bscroll(warp, {
                 scrollY:true,
                 scrollX:false,
                 click:true,
             }) 
+        },
+        onAside(id){
+            const {warp} = this.$refs; 
+            this.scroll.scrollToElement(warp.children[id], 250);
+            this.$store.commit('changeStatus',{
+                    active:id
+            })
+            
+        },
+        getPsition(heightArrt,heightVal){
+            for (let index = 1; index < heightArrt.length; index++) {
+                if (heightVal>heightArrt[0]) {
+                    if(heightVal>heightArrt[index-1]&&heightVal<heightArrt[index]) {
+                        return index;
+                        break;
+                    }else{
+                        return index+1;
+                        break;
+                    }
+                }else{
+                    return 0;
+                    break;
+                }
+               
+            }
         }
     }    
 }
 </script>
 <style lang="scss" scoped>
    .order-list{
-        height: 600px;
         display: flex;
+        overflow: hidden;
+        height: 1000px;
         aside{
-            overflow: hidden;
-            flex-grow: 2px;
+     
             background-color: #f5f5f5;
-            ul{
-                
-                overflow: hidden;
+            ul{ 
                 color: #666;
                 li {
                     padding: 4.666667vw 3vw;
@@ -213,7 +136,7 @@ export default {
         }
         .list{
             overflow: hidden;
-            flex-grow:3;
+            width: 550px;
             .select-content{
                 margin-left: 12px;
                 h2{
@@ -233,24 +156,30 @@ export default {
                     padding: 4.666667vw 2vw;
                     display: flex;
                     img{
-                        flex-grow: 1;
+                        width: 170px;
+                        height: 170px;
                         margin-right: 12px;
                     }
                     div{
-                        flex-grow: 3;
+                        width: 300px;
                         h2{
                             font-size: 28px;
-                            margin: 10px 0px;
                             font-weight: 700;
                             color: #333;
+                            padding-top: 0px;
                         }
-                        p{
-                            font-size: 20px;
+                        p.p-span{
+                           
                            color: #999;
+                           span{
+                               font-size: 20px;
+                                margin-left: 11px;
+                           }
                         }
                         div{
                             display: flex;
                             justify-content: space-between;
+                            margin-top: 0px;
                             span:nth-child(1){
                                 color: red;
                                 font-size: 34px;
@@ -266,5 +195,9 @@ export default {
                 }
             }
         }
+    }
+    .order-list .list .select-content h2[data-v-de0231e8]{
+        padding-top: 0px;
+        margin-left: 12px;
     }
 </style>

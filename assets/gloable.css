@@ -18,3 +18,16 @@ body {
     box-sizing: border-box;
   }
   
+.mask-enter-active, .mask-leave-active {
+  transition: opacity .5s;
+}
+.mask-enter, .mask-leave-to {
+  opacity: 0;
+}
+.action-enter-active, .action-leave-active {
+  transform: translate(0px,0px); 
+        transition: transform .25s;
+}
+.action-enter, .action-leave-to {
+ transform: translate(0px,620px); 
+}

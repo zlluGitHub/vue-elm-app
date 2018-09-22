@@ -5,7 +5,7 @@
         <span></span>
     </div>
     <div class="header-title">
-        <div class="title-h1">
+        <div class="title-h1" @click.stop="popUp()">
             <h1>汉堡世家</h1>
             <i></i>
         </div>
@@ -15,12 +15,12 @@
             <span>蜂鸟专送</span>
         </p>    
     </div>
-    <div @click="onOpen()" class="favourable">
+    <div @click.stop="ticketShow()" class="favourable">
         <span>￥7</span>
         <span>无门槛</span>
         <span>领取</span>
     </div>
-    <div class="fill-up">
+    <div class="fill-up" @click="favourable()">
         <div class="fill-up-left">
             <span>减满</span> 
             <p>满25减13，满50减23，满80减35</p>
@@ -35,16 +35,21 @@
 <script>
 export default {
   name: 'heade',
-  props: {
-    msg: String
-  },
-  data:{
-      active:false
-  },
   methods:{
-        onOpen(){  
-            this.active=true;
-            console.log(this.$store.state.goods.goods);
+        ticketShow(){  
+            this.$store.commit('changeStatus',{
+                ticketShow:true
+            })
+        },
+        favourable(){  
+            this.$store.commit('changeStatus',{
+                favourable:true
+            })
+        },
+        popUp(){  
+            this.$store.commit('changeStatus',{
+                popup:true
+            })
         }
     }
 }

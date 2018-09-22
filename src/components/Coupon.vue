@@ -1,11 +1,11 @@
 <template>
     <div>
         <transition name="mask">
-            <div v-if="active" class="activity">  
+            <div v-if="$store.state.status.ticketShow" class="activity" @touchmove.prevent>  
             </div>
         </transition>
         <transition name="action">
-            <div v-if="active" class="inner">
+            <div v-if="$store.state.status.ticketShow" class="inner">
                     <h2>优惠活动</h2>
                     <span @click="onClose()"></span>
                     <p>超级用户特权<span>限超级用户兑换</span></p>
@@ -27,19 +27,18 @@
                     </div>
                 </div>
         </transition>
+
     </div>
     
 </template>
 <script>
 export default {
     nane:'activity',
-    data:()=>({
-        display:'flex',
-        active:true
-    }),
     methods:{
         onClose(){  
-            this.active=false;
+            this.$store.commit('changeStatus',{
+                ticketShow:false
+            })
         }
     }
 }
@@ -48,15 +47,13 @@ export default {
 <style lang="scss" scoped>
 .activity{
     position: fixed;
+    overflow: hidden;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 100%;
+    bottom: 0;
+    right: 0;
     background-color: rgba(0,0,0,.5);
     z-index: 10;
-    display: flex;
-   
-   
 }
 
  .inner{
@@ -169,18 +166,5 @@ export default {
         }
     }
 
-.mask-enter-active, .mask-leave-active {
-  transition: opacity .5s;
-}
-.mask-enter, .mask-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-.action-enter-active, .action-leave-active {
-  transform: translate(0px,0px); 
-        transition: transform .25s;
-}
-.action-enter, .action-leave-to /* .fade-leave-active below version 2.1.8 */ {
- transform: translate(0px,620px); 
-}
 
 </style>
