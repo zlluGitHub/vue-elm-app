@@ -4,9 +4,9 @@
             <img src="../../assets/img/b7jpeg.webp" alt="">
         </div>
         <div class="recommend">
-            商家推荐
+            榜上有名，速来抢购！
         </div>
-        <div class="recommend-wrap" ref="wrapper">
+        <!-- <div class="recommend-wrap" ref="wrapper">
             <div ref="warpInner">
             <div class="inner">
                 <img src="../../assets/img/img1.webp" alt="">
@@ -75,7 +75,7 @@
                 </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <OrderList/>
        
     </div>
@@ -87,18 +87,19 @@ export default {
     name:'orders',
     components: {
         OrderList,
-    },
-    mounted() { 
-        this.$nextTick(() => { 
-            const element = this.$refs.warpInner;
-            const liWidth = element.children[1].offsetWidth        
-            element.style.width= element.children.length*liWidth+'px';
-            new Bscroll(this.$refs.wrapper, {
-                scrollX:true,
-                click:true
-            }) 
-        })     
     }
+    // ,
+    // mounted() { 
+    //     this.$nextTick(() => { 
+    //         const element = this.$refs.warpInner;
+    //         const liWidth = element.children[1].offsetWidth        
+    //         element.style.width= element.children.length*liWidth+'px';
+    //         new Bscroll(this.$refs.wrapper, {
+    //             scrollX:true,
+    //             click:true
+    //         }) 
+    //     })     
+    // }
    
 }
 </script>

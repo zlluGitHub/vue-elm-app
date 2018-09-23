@@ -46,7 +46,7 @@
                     <img src="../../assets/img/wuxing.svg" alt="">
                     <span>超赞</span>
                 </div>
-                <p>骨头都没剩下</p>
+                <p>味道应该还不错，给姐姐叫的没吃到</p>
                 <p class="content">商家回复：亲爱的顾客，感谢您选择品尝本店的美食，谢谢您认可我们的口味和服务，我们会继续努力，为您提供更好的服务。祝您生活愉快！</p>
                 <div class="imgs">
                     <img src="../../assets/img/rep1.webp" alt="">
@@ -54,7 +54,42 @@
                 </div>
                 <p><i></i><span>招盘童子鸡</span><span>叫了份薯条</span> </p>
             </div>
-            
+            <div class="ela-warp">
+                <span class="ela-img"></span>
+                <div class="user-id">
+                    <span>在*****光</span>
+                    <span>2018-09-3</span>
+                </div>
+                <div class="ela-star">
+                    <img src="../../assets/img/wuxing.svg" alt="">
+                    <span>超赞</span>
+                </div>
+                <p>昨天点的，今天又点一份，不错，店铺活动很优惠</p>
+                <p class="content">商家回复：亲爱的顾客，感谢您选择品尝本店的美食，谢谢您认可我们的口味和服务，我们会继续努力，为您提供更好的服务。祝您生活愉快！</p>
+                <div class="imgs">
+                    <img src="../../assets/img/rep1.webp" alt="">
+                    <img src="../../assets/img/rep2.webp" alt="">
+                </div>
+                <p><i></i><span>招盘童子鸡</span></p>
+            </div>
+            <div class="ela-warp">
+                <span class="ela-img"></span>
+                <div class="user-id">
+                    <span>来*****年</span>
+                    <span>2018-09-1</span>
+                </div>
+                <div class="ela-star">
+                    <img src="../../assets/img/wuxing.svg" alt="">
+                    <span>超赞</span>
+                </div>
+                <p>骨头都没剩下</p>
+                <p class="content">商家回复：亲爱的顾客，感谢您选择品尝本店的美食，谢谢您认可我们的口味和服务，我们会继续努力，为您提供更好的服务。祝您生活愉快！</p>
+                <div class="imgs">
+                    <img src="../../assets/img/rep1.webp" alt="">
+                    <img src="../../assets/img/rep2.webp" alt="">
+                </div>
+                <p><i></i><span>叫了份薯条</span> </p>
+            </div>  
         </div>
     </section>
 </template>

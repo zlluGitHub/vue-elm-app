@@ -20,8 +20,10 @@
                                 <h2>{{goods.name}}</h2>
                                
                                 <p class="p-span"><span>月售{{goods.sellCount}}份</span><span>{{goods.rating}}%</span></p>
-                                <div><span>￥{{goods.price}}</span><span></span></div>
-                                
+                                <div>
+                                    <span>￥{{goods.price}}</span>
+                                    <Counter :id="goods.id" :price="goods.price"/>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -33,12 +35,15 @@
 </template>
 <script>
 import Bscroll from 'better-scroll' ;
-import $ from 'jquery';
+import Counter from "./Counter";
 export default { 
     name:'order-list',
+    components: {
+        Counter,
+    },
     data:()=>({
-       
-        arrt:[]
+        arrt:[],
+        counter: 0
     }),
     computed: {
         goodsNameList() {
@@ -49,21 +54,15 @@ export default {
         }
     },
     mounted() { 
-        
         this.$nextTick(() => { 
             const {aside,asideUl, list,warp,we} = this.$refs;             
             this.scrollBox(aside,asideUl);
             this.scrollBox(list,warp);
-            // const as = warp.children[0]
-            // console.log();
-            // this.maxVal=warp.children[0].clientHeight
             for (let index = 0; index < warp.children.length; index++) {
                 const element = warp.children[index].offsetHeight
                 this.arrt.push(element);                
             }
-            this.scroll.on('scrollEnd', pos => {     
-                // console.log(-pos.y/this.maxVal);
-                         
+            this.scroll.on('scrollEnd', pos => {  
                 this.$store.commit('changeStatus',{
                     active:this.getPsition(this.arrt,-pos.y)
                 })
@@ -93,7 +92,7 @@ export default {
         getPsition(heightArrt,heightVal){
             for (let index = 1; index < heightArrt.length; index++) {
                 if (heightVal>heightArrt[0]-8) {
-                    if(heightVal<heightArrt[index-1]+heightArrt[index]-8) {
+                    if(heightVal<heightArrt[index-1]+heightArrt[index]-18) {
                         return index;
                     }else{
                         return index+1;
@@ -140,7 +139,8 @@ export default {
             .select-content{
                 margin-left: 12px;
                 h2{
-                    padding-top: 12px;
+                    font-size: 26px;
+                    padding: 12px 0px;
                     margin: 0px;
                 }
                 span{
@@ -153,7 +153,7 @@ export default {
                color: #666;
 
                 li{
-                    padding: 4.666667vw 2vw;
+                    padding: 2vw 2vw;
                     display: flex;
                     img{
                         width: 170px;
@@ -169,7 +169,7 @@ export default {
                             padding-top: 0px;
                         }
                         p.p-span{
-                           
+                           margin-bottom: 30px;
                            color: #999;
                            span{
                                font-size: 20px;
@@ -179,17 +179,12 @@ export default {
                         div{
                             display: flex;
                             justify-content: space-between;
-                            margin-top: 0px;
+                            
                             span:nth-child(1){
                                 color: red;
                                 font-size: 34px;
                             }
-                            span:nth-child(2){
-                                width: 45px;
-                                height: 45px;
-                                background: url('../../assets/img/jia.png') center center no-repeat;
-                                background-size: contain;
-                            }
+                            
                         }
                     }
                 }

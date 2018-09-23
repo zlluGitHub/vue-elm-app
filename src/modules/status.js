@@ -2,7 +2,10 @@ const state = {
   ticketShow:false,
   favourable:false,
   popup:false,
-  active:0
+  active:0,
+  allPrice:0,
+  cartScale:false,
+  count:0
 };
 
 const mutations = {

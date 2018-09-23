@@ -4,7 +4,6 @@ import goods from '../modules/goods'
 import carts from '../modules/cart'
 import status from '../modules/status'
 Vue.use(Vuex)
-
 const store = new Vuex.Store({
   modules: {
     goods,

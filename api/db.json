@@ -19,7 +19,7 @@
         {
           "name": "皮蛋瘦肉粥2",
           "id": "1231231",
-          "price": 10,
+          "price": 9,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -31,7 +31,7 @@
         {
           "name": "皮蛋瘦肉粥3",
           "id": "1231232",
-          "price": 10,
+          "price": 9.8,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -43,7 +43,7 @@
         {
           "name": "皮蛋瘦肉粥4",
           "id": "1231233",
-          "price": 10,
+          "price": 8.9,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -61,7 +61,7 @@
         {
           "name": "皮蛋瘦肉粥5",
           "id": "asdasdasda",
-          "price": 10,
+          "price": 12,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -73,7 +73,7 @@
         {
           "name": "皮蛋瘦肉粥6",
           "id": "asdasdasdb",
-          "price": 10,
+          "price": 11.5,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -85,7 +85,7 @@
         {
           "name": "皮蛋瘦肉粥7",
           "id": "asdasdasdc",
-          "price": 10,
+          "price": 12,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -109,7 +109,7 @@
         {
           "name": "皮蛋瘦肉粥9",
           "id": "asdasdasde",
-          "price": 10,
+          "price": 9,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -121,7 +121,7 @@
         {
           "name": "皮蛋瘦肉粥10",
           "id": "asdasdasdf",
-          "price": 10,
+          "price": 8,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,
@@ -139,7 +139,7 @@
         {
           "name": "皮蛋瘦肉粥11",
           "id": "asdasda0",
-          "price": 10,
+          "price": 11,
           "oldPrice": "",
           "description": "咸粥",
           "sellCount": 229,

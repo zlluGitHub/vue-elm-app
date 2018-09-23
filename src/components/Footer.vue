@@ -5,9 +5,11 @@
         </div>
         <div class="inner">
             <div class="inner-left">
-                <p><span>￥124.6</span><span>￥127.5</span></p>
+                <p><span>￥{{this.$store.state.status.allPrice}}</span><span>￥127.5</span></p>
                 <p>另需配送费1元</p>
-                <i><img src="../../assets/img/gouwu.svg" alt=""><i>20</i></i>              
+                
+                    <i :class="{'active-scale':this.$store.state.status.cartScale}"><img src="../../assets/img/gouwu.svg" alt=""><i>{{this.$store.state.status.count}}</i></i>
+                  
             </div>
             <span class="inner-right">去结算</span>   
         </div>
@@ -63,6 +65,7 @@
                 background : #3190e8;
                 border: 1.333333vw solid #444;
                 box-shadow: 0 -0.8vw 0.533333vw 0 rgba(0,0,0,.1);
+              
                 img{
                     padding: 15px;
                     width: 100%;
@@ -81,17 +84,31 @@
                     background-color: red;
                 }
             }
+            .inner-left>i.active-scale{
+               animation:jump 0.15s infinite;
+                animation-direction:alternate;
+            }
         .inner-right{
             flex-grow: 1;
             text-align: center;
-                display: inline-block;
-                font-size: 32px;
-                padding: 28px;
-                color: #fff;
-                font-weight: 700;
-                background-color: #38ca73;
+            display: inline-block;
+            font-size: 32px;
+            padding: 28px;
+            color: #fff;
+            font-weight: 700;
+            background-color: #38ca73;
             
         }
+     
     }
 }
+@keyframes jump {
+    from {transform:scale(1);}
+    to {transform:scale(1.1);}
+    // 0%{transform:scale(1);}
+    // 50%{transform:scale(1.1);}
+    // 100%{transform:scale(1.2);}
+    // 50%{transform:scale(1.1);}
+    // 0%{transform:scale(1);}
+  }
 </style>
