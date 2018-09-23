@@ -5,7 +5,8 @@ const state = {
   active:0,
   allPrice:0,
   cartScale:false,
-  count:0
+  count:0,
+  details:false
 };
 
 const mutations = {

@@ -54,34 +54,34 @@ export default {
 .inner{
         position: fixed;
         width: 100%;
-        padding: 30px;
+        padding: 0.3px;
         bottom: 0px;
         background: #f5f5f5;
         z-index: 120;
         h2{
             color: #000;
-            font-size: 36px;
+            font-size: 0.36px;
             text-align: center;
             margin-top: 5px;
         }
         >span{
             position: absolute;
-            top: 30px;
-            right: 30px;
+            top: 0.30px;
+            right: 0.30px;
             display: inline-block;
-            width: 40px;
-            height: 40px;
+            width: 0.40px;
+            height: 0.40px;
             background: url('../../assets/img/close.png') center center no-repeat;
             background-size: cover;
         }
         ul{
-            height: 380px;
+            height: 3.80px;
             li{
-                font-size: 26px;
-                margin: 18px 0px;
+                font-size: 0.26px;
+                margin: 0.18px 0px;
                 span{
                     background-color: rgb(240, 115, 115);
-                    margin-right: 12px;
+                    margin-right: 0.12px;
                     color: #f5f5f5;
                     padding: 5px;
                 }

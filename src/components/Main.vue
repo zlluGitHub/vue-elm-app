@@ -17,7 +17,7 @@
     <PopUp/>
     <Activity/>
     <Coupon/>
-    
+    <Details/>
   </div>
 </template>
 <script>
@@ -25,7 +25,7 @@ import PopUp from './PopUp.vue';
 import Activity from './Activity.vue';
 import $ from 'jquery'
 import Coupon from './Coupon.vue';
-
+import Details from "./Details";
 export default {
   data:()=>({
     active:false,
@@ -34,13 +34,12 @@ export default {
   components:{
     PopUp,
     Activity,
-    Coupon
+    Coupon,
+    Details
   },
   mounted() {
     const {viewBox}=this.$refs;
     window.addEventListener('scroll', () => {
-      
-        console.log($(viewBox).offset().top-$(window).scrollTop() )
       if ($(viewBox).offset().top-$(window).scrollTop()<=0) {
         this.active=true;
       }else{

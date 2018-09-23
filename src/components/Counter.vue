@@ -1,8 +1,8 @@
 <template>
     <div class="count">
-        <span class="span1" v-if="counter!==0" @click="changeCounter('reduce')"></span>
+        <span class="span1" v-if="counter!==0" @click.stop="changeCounter('reduce')"></span>
         <span class="span2">{{$store.getters.getFoodNum(this.id)}}</span>
-        <span class="span3" @click="changeCounter('add')"></span>
+        <span class="span3" @click.stop="changeCounter('add')"></span>
     </div> 
 </template>
 
@@ -54,13 +54,13 @@ export default {
 <style lang="scss" scoped>
 .count{
 
-    margin-left: 50px;
+    margin-left: 0.50px;
     display: flex;
-    width: 300px;
+    width: 3.00px;
     position: relative;
     span{
-        width: 45px;
-        height: 45px;    
+        width: 0.45px;
+        height: 0.45px;    
     }
     span.span1{
         position: absolute;
@@ -68,9 +68,9 @@ export default {
             background-size: contain;
     }
     span.span2{
-        margin-left: 60px;
-        font-size: 32px;
-        padding-top:5px;
+        margin-left: 0.60px;
+        font-size: 0.32px;
+        padding-top:0.05px;
         text-align: center; 
     }
     span.span3{

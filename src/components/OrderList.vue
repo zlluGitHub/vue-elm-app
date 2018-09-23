@@ -2,7 +2,7 @@
     <div class="order-list">
         <aside ref="aside" >
             <ul v-show="goodsNameList.length" class="asideUl" ref="asideUl">
-                <li v-for="(name,ind) in goodsNameList" :key="ind" @click="onAside(ind)" :class="$store.state.status.active===ind?'active':''">
+                <li v-for="(name,ind) in goodsNameList" :key="ind" @click.stop="onAside(ind)" :class="$store.state.status.active===ind?'active':''">
                     <img src="../../assets/img/huo.webp" alt="dsf"> 
                     <span>{{name}}</span>
                 </li>
@@ -14,7 +14,7 @@
                 <div v-for="item in goodsList" :key="item.id" class="select-content">
                     <h2>{{item.name}}<span>美味又实惠, 大家快来抢!</span></h2>
                     <ul >
-                        <li v-for="goods in item.foods" :key="goods.id">
+                        <li v-for="goods in item.foods" :key="goods.id" @click.stop="onClose">
                             <img :src="goods.icon" :alt="goods.name">
                             <div>
                                 <h2>{{goods.name}}</h2>
@@ -31,15 +31,16 @@
                 
             </div>
         </div>
+       
     </div>
 </template>
 <script>
-import Bscroll from 'better-scroll' ;
+import Bscroll from 'better-scroll';
 import Counter from "./Counter";
 export default { 
     name:'order-list',
     components: {
-        Counter,
+        Counter
     },
     data:()=>({
         arrt:[],
@@ -104,6 +105,11 @@ export default {
                 }
                
             }
+        },
+        onClose(){  
+            this.$store.commit('changeStatus',{
+               details:true
+            })
         }
     }    
 }
@@ -112,7 +118,7 @@ export default {
    .order-list{
         display: flex;
         overflow: hidden;
-        height: 1000px;
+        height: 800px;
         aside{
      
             background-color: #f5f5f5;

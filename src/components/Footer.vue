@@ -11,17 +11,27 @@
                     <i :class="{'active-scale':this.$store.state.status.cartScale}"><img src="../../assets/img/gouwu.svg" alt=""><i>{{this.$store.state.status.count}}</i></i>
                   
             </div>
-            <span class="inner-right">去结算</span>   
+            <span class="inner-right" @click.stop="balance">去结算</span>   
         </div>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        balance(){
+            alert('呀！出问题啦，暂时无法结算！请稍后再试...')
+        }
+    }
+}
+</script>
+
 <style lang="scss" scoped>
 .footer{
     position: fixed;
     bottom: 0px;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 250;
     .footer-top{
         background-color: #fffad6;
         text-align: center;

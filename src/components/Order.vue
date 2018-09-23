@@ -77,16 +77,16 @@
           </div>
         </div> -->
         <OrderList/>
-       
+  
     </div>
 </template>
 <script>
 import OrderList from './OrderList.vue';
-import Bscroll from 'better-scroll' ;
+
 export default { 
     name:'orders',
     components: {
-        OrderList,
+        OrderList
     }
     // ,
     // mounted() { 

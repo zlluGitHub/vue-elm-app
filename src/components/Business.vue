@@ -21,11 +21,11 @@
 </template>
 <style lang="scss" scoped>
 .seller{
-    font-size: 25px;
+    font-size: 0.25px;
     background-color: #f5f5f5;
     .address{
         background-color: #fff;
-        padding: 20px;
+        padding: 0.20px;
         h3{
             font-size: 32px;
             margin: 5px 0;
@@ -37,18 +37,18 @@
     }
     .action{
         background-color: #fff;
-        margin-top: 20px;
-        padding: 20px;
+        margin-top: 0.20px;
+        padding: 0.20px;
         h3{
             padding: 8px 0;
-            margin: 10px 0;
+            margin: 0.10px 0;
         }
         ul li{
             padding: 15px 0px;
             span{
                 display: inline-block;
-                padding: 0px 10px;
-                margin-right: 12px;
+                padding: 0px 0.10px;
+                margin-right: 0.12px;
                 color: #fff;
                 background-color: rgb(240, 115, 115);
             }
