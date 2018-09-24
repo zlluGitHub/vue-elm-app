@@ -83,7 +83,6 @@ export default {
         onChangeScroll(){
             const {orderList}=this.$refs;
             window.addEventListener('scroll', () => {
-               console.log($(orderList).offset().top-$(window).scrollTop());
                this.heightVal=$(window).height()/100;
             }, false);   
         } ,
