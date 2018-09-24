@@ -43,8 +43,8 @@ export default {
 <style lang="scss" scoped>
 .activity{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
@@ -54,36 +54,36 @@ export default {
 .inner{
         position: fixed;
         width: 100%;
-        padding: 0.3px;
-        bottom: 0px;
+        padding: 0.3rem;
+        bottom: 0rem;
         background: #f5f5f5;
         z-index: 120;
         h2{
             color: #000;
-            font-size: 0.36px;
+            font-size: 0.36rem;
             text-align: center;
-            margin-top: 5px;
+            margin-top: 0.05rem;
         }
         >span{
             position: absolute;
-            top: 0.30px;
-            right: 0.30px;
+            top: 0.30rem;
+            right: 0.30rem;
             display: inline-block;
-            width: 0.40px;
-            height: 0.40px;
+            width: 0.40rem;
+            height: 0.40rem;
             background: url('../../assets/img/close.png') center center no-repeat;
             background-size: cover;
         }
         ul{
-            height: 3.80px;
+            height: 3.80rem;
             li{
-                font-size: 0.26px;
-                margin: 0.18px 0px;
+                font-size: 0.26rem;
+                margin: 0.18rem 0rem;
                 span{
                     background-color: rgb(240, 115, 115);
-                    margin-right: 0.12px;
+                    margin-right: 0.12rem;
                     color: #f5f5f5;
-                    padding: 5px;
+                    padding: 0.05rem;
                 }
             }
         }

@@ -21,34 +21,34 @@
 </template>
 <style lang="scss" scoped>
 .seller{
-    font-size: 0.25px;
+    font-size: 0.25rem;
     background-color: #f5f5f5;
     .address{
         background-color: #fff;
-        padding: 0.20px;
+        padding: 0.20rem;
         h3{
-            font-size: 32px;
-            margin: 5px 0;
+            font-size: 0.32rem;
+            margin: 0.05rem 0;
         }
         div p{
             color: #666;
-            padding: 5px 0px;
+            padding: 0.05rem 0rem;
         }
     }
     .action{
         background-color: #fff;
-        margin-top: 0.20px;
-        padding: 0.20px;
+        margin-top: 0.20rem;
+        padding: 0.20rem;
         h3{
-            padding: 8px 0;
-            margin: 0.10px 0;
+            padding: 0.08rem 0;
+            margin: 0.10rem 0;
         }
         ul li{
-            padding: 15px 0px;
+            padding: 0.15rem 0rem;
             span{
                 display: inline-block;
-                padding: 0px 0.10px;
-                margin-right: 0.12px;
+                padding: 0rem 0.10rem;
+                margin-right: 0.12rem;
                 color: #fff;
                 background-color: rgb(240, 115, 115);
             }

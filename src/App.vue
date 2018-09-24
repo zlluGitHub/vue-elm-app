@@ -28,6 +28,5 @@ export default {
 #app {
   width: 100%;
   color: #2c3e50;
-   margin-bottom: 150px;
 }
 </style>

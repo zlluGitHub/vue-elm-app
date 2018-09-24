@@ -1,5 +1,5 @@
 <template>
-    <div class="order-list">
+    <div class="order-list" ref="orderList">
         <aside ref="aside" >
             <ul v-show="goodsNameList.length" class="asideUl" ref="asideUl">
                 <li v-for="(name,ind) in goodsNameList" :key="ind" @click.stop="onAside(ind)" :class="$store.state.status.active===ind?'active':''">
@@ -9,11 +9,14 @@
                 <!-- <li><img src="../../assets/img/er.webp" alt="df"> <span>优惠</span></li> -->
             </ul>
         </aside>
-        <div class="list" ref="list">
+        <div class="list" ref="list" :style="{'height':heightVal+'rem'}">
             <div ref="warp">
                 <div v-for="item in goodsList" :key="item.id" class="select-content">
-                    <h2>{{item.name}}<span>美味又实惠, 大家快来抢!</span></h2>
-                    <ul >
+                    <div>
+                        <h2>{{item.name}}</h2>
+                        <span>美味又实惠, 大家快来抢!</span>
+                    </div>
+                    <ul>
                         <li v-for="goods in item.foods" :key="goods.id" @click.stop="onClose">
                             <img :src="goods.icon" :alt="goods.name">
                             <div>
@@ -31,20 +34,23 @@
                 
             </div>
         </div>
-       
+        
     </div>
 </template>
 <script>
 import Bscroll from 'better-scroll';
 import Counter from "./Counter";
+import $ from 'jquery'
 export default { 
     name:'order-list',
     components: {
-        Counter
+        Counter,
+        
     },
     data:()=>({
         arrt:[],
-        counter: 0
+        counter: 0,
+        heightVal:8,
     }),
     computed: {
         goodsNameList() {
@@ -68,13 +74,19 @@ export default {
                     active:this.getPsition(this.arrt,-pos.y)
                 })
             })
-        })  
+            this.onChangeScroll();
+        }) 
+        
         
     },
      methods:{
-        onChangeScroll(activeTabIndex){
-            const { we } = this.$refs;   
-        },
+        onChangeScroll(){
+            const {orderList}=this.$refs;
+            window.addEventListener('scroll', () => {
+               console.log($(orderList).offset().top-$(window).scrollTop());
+               this.heightVal=$(window).height()/100;
+            }, false);   
+        } ,
         scrollBox(warp,warpInner){
             this.scroll= new Bscroll(warp, {
                 scrollY:true,
@@ -118,19 +130,19 @@ export default {
    .order-list{
         display: flex;
         overflow: hidden;
-        height: 800px;
         aside{
-     
+          
             background-color: #f5f5f5;
             ul{ 
                 color: #666;
                 li {
-                    padding: 4.666667vw 3vw;
-                    span{
-            
-                        display: inline-block;
-                        font-size: 30px;
-                        padding: 0px 16px;
+                    padding: 4.3vw 2vw;
+                    font-size: 0.25rem;
+                    img{
+                        width: 0.25rem;
+                    }
+                    span{   
+                        padding: 0rem 0.16rem;
                     }
                 }
                 li.active{
@@ -141,45 +153,52 @@ export default {
         }
         .list{
             overflow: hidden;
-            width: 550px;
+            height: 100%;
             .select-content{
-                margin-left: 12px;
-                h2{
-                    font-size: 26px;
-                    padding: 12px 0px;
-                    margin: 0px;
+                margin-left: 0.12rem;
+                 
+                div{
+                   font-size: 0.18rem;
+                    h2{
+                        display: inline-block;
+                        font-size: 0.26rem;
+                        padding: 0.12rem 0rem;
+                        margin: 0rem;   
+                    }
+                    span{
+                        
+                        margin-left: 0.08rem;
+                        color: #999;
+                    }
                 }
-                span{
-                    font-size: 15px;
-                    margin-left: 8px;
-                    color: #999;
-                }
+                
+                
             }
             ul{
                color: #666;
-
+                 height: 100%;
                 li{
                     padding: 2vw 2vw;
                     display: flex;
                     img{
-                        width: 170px;
-                        height: 170px;
-                        margin-right: 12px;
+                        width: 1.70rem;
+                        height: 1.70rem;
+                        margin-right: 0.12rem;
                     }
                     div{
-                        width: 300px;
+                        width: 3.00rem;
                         h2{
-                            font-size: 28px;
+                            font-size: 0.28rem;
                             font-weight: 700;
                             color: #333;
-                            padding-top: 0px;
+                            padding-top: 0rem;
                         }
                         p.p-span{
-                           margin-bottom: 30px;
+                           margin-bottom: 0.30rem;
                            color: #999;
                            span{
-                               font-size: 20px;
-                                margin-left: 11px;
+                               font-size: 0.20rem;
+                                margin-left: 0.11rem;
                            }
                         }
                         div{
@@ -188,7 +207,7 @@ export default {
                             
                             span:nth-child(1){
                                 color: red;
-                                font-size: 34px;
+                                font-size: 0.34rem;
                             }
                             
                         }
@@ -198,7 +217,7 @@ export default {
         }
     }
     .order-list .list .select-content h2[data-v-de0231e8]{
-        padding-top: 0px;
-        margin-left: 12px;
+        padding-top: 0rem;
+        margin-left: 0.12rem;
     }
 </style>

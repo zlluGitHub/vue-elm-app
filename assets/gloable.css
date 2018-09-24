@@ -16,6 +16,7 @@ body {
   }
   * {
     box-sizing: border-box;
+   
   }
   
 .mask-enter-active, .mask-leave-active {

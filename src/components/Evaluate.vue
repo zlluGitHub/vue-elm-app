@@ -109,24 +109,24 @@ export default {
 <style lang="scss" scoped>
 .evaluale{
     margin-bottom: 2.133333vw;
-    font-size: 24px;
+    font-size: 0.24rem;
     padding: 5.333333vw 0 8vw 6.4vw;
     display: flex;
     .star{
         display: flex;
-        width: 250px;
+        width: 2.50rem;
         p:nth-child(1){
-            font-size: 70px;
+            font-size: 0.70rem;
             color: #ff6000;
             
         }
         p:nth-child(2){
-            margin-left: 24px;
-            margin-top: 12px;
+            margin-left: 0.24rem;
+            margin-top: 0.12rem;
             img{
-                margin-top: 8px;
-                width: 120px;
-                height: 20px;
+                margin-top: 0.08rem;
+                width: 1.20rem;
+                height: 0.20rem;
             }
         }
     }
@@ -134,40 +134,40 @@ export default {
         display: flex;
 
         div{
-            padding: 0px 45px;
+            padding: 0rem 0.45rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             span{
                 display: inline-block;
-                margin-bottom: 16px;
+                margin-bottom: 0.16rem;
             }
             p{
-                font-size: 40px;
+                font-size: 0.40rem;
             }
         }
         div:nth-child(3){
-            border-left: 1px solid #ddd;
+            border-left: 0.01rem solid #ddd;
         }
     }
    
 }
  .bottom{
-        margin-top: 12px;
-        font-size: 26px;
-        padding: 20px;
+        margin-top: 0.12rem;
+        font-size: 0.26rem;
+        padding: 0.20rem;
         .eav-action{
             
             display: flex;
             flex-wrap: wrap;
             p{
-                padding: 10px 15px;
-                margin: 8px;
+                padding: 0.10rem 0.15rem;
+                margin: 0.08rem;
                 border-radius: 1.2vw;
                 color: #6d7885;
                 background-color: #ebf5ff;
                 span{
-                    margin-left: 5px;
+                    margin-left: 0.05rem;
                 }
             }
             p.active{
@@ -180,8 +180,8 @@ export default {
             }
         }
         .select{
-            padding: 18px;
-            margin-top: 12px;
+            padding: 0.18rem;
+            margin-top: 0.12rem;
             border-top: .133333vw solid #eee;
             border-bottom: .133333vw solid #eee;
         }
@@ -189,53 +189,56 @@ export default {
     }
     .ela-list{
         .ela-warp{
-            padding-left: 100px;
-            padding-right: 40px;
+            margin-top: 0.3rem;
+            padding-left: 1.00rem;
+            padding-right: 0.40rem;
             position: relative;
             .ela-img{
-                width: 60px;
-                height: 60px;
-                top: 0px;
-                left: 28px;
+                width: 0.60rem;
+                height: 0.60rem;
+                top: 0rem;
+                left: 0.28rem;
                 position: absolute;
-                background:url('../../assets/img/elm.png') 0px 0px no-repeat;
+                background:url('../../assets/img/elm.png') 0rem 0rem no-repeat;
                 background-size:cover;
                 border-radius: 100%;
             }
             .user-id{
                 display: flex;
-                font-size: 28px;
+                font-size: 0.28rem;
                 color: #000;
                 justify-content: space-between;
                 span:nth-child(2){
-                    font-size: 22px;
                     color: #6d7885;
                 }
             }
             .ela-star{
+                 font-size: 0.24rem;
                 img{
-                    width: 120px;
-                    height: 20px;
+                    width: 1.20rem;
+                    height: 0.20rem;
                 }
                 span{
-                    margin-left: 8px;
+                    padding: 0.1rem 0;
+                    margin-left: 0.08rem;
                     color: rgb(255, 96, 0);
-                    font-size: 24px;
+                   
                 }
+                
             }
             p{
                  color: #333;
-                 font-size: 28px;
+                 font-size: 0.28rem;
             }
             P:nth-child(4){
                
-                margin: 12px 0px;
+                margin: 0.12rem 0rem;
             }
             .content{
-               padding: 20px;
-               border-radius: 12px;
-               font-size: 26px;
-               margin-top: 28px;
+               padding: 0.20rem;
+               border-radius: 0.12rem;
+               font-size: 0.26rem;
+               margin-top: 0.28rem;
                background: #f3f3f3;
                position: relative;
                 
@@ -253,27 +256,27 @@ export default {
                 
             }
             .imgs{
-                margin: 12px 0px;
+                margin: 0.12rem 0rem;
                 img{
-                    padding: 12px 15px 12px 0px;
+                    padding: 0.12rem 0.15rem 0.12rem 0rem;
               }
             }
             p:nth-child(7){
                 display: flex;
                 flex-wrap: wrap;
                  i{
-                    width: 42px;
-                    height: 50px;
+                    width: 0.42rem;
+                    height: 0.50rem;
                     background: url('../../assets/img/zan.png') center center no-repeat;
                     background-size: contain;
-                    margin-right: 12px;
+                    margin-right: 0.12rem;
                 }
                 span{
-                    padding: 12px;
-                    margin-right:12px;
-                    border-radius: 10px; 
+                    padding: 0.12rem;
+                    margin-right:0.12rem;
+                    border-radius: 0.10rem; 
                     background-color: #ebf5ff;
-                    font-size: 20px;
+                    font-size: 0.20rem;
                     color: #6d7885;
                 }
             }

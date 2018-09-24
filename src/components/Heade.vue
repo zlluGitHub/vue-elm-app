@@ -82,11 +82,11 @@ export default {
              font-size: 5vw;
          }
          i{
-             width: 20px;
+             width: 0.20rem;
             content: "";
             position: absolute;
-            margin-top: 5px;
-            margin-left: 455px;
+            margin-top: 0.05rem;
+            margin-left: 4.55rem;
             border-style: solid;
             border-width: 1.466667vw 0 1.466667vw 1.733333vw;
             border-color: transparent transparent transparent rgba(0,0,0,.67);
@@ -97,19 +97,19 @@ export default {
      }
      .message{
          display: flex;
-         margin: 12px 0px;
+         margin: 0.12rem 0rem;
          justify-content: center;
          span{
              font-size: 3vw;
-             margin: 0px 5px;
+             margin: 0rem 0.05rem;
          }
      }
  }
  .favourable{
      display: flex;
-     font-size: 24px;
+     font-size: 0.24rem;
      justify-content: center;
-     margin-top: 5px;
+     margin-top: 0.05rem;
     span:nth-child(1){
         font-weight: bold;
       
@@ -123,8 +123,8 @@ export default {
     span:nth-child(2)::after{
         content: "";
         position: absolute;
-        bottom: -6px;
-        right: -5px;
+        bottom: -0.06rem;
+        right: -0.05rem;
         border-top: 1.5vw solid #fff;
         border-left: 1.5vw solid transparent;
         transform: rotate(-45deg);
@@ -133,8 +133,8 @@ export default {
     span:nth-child(3)::before{
         content: "";
         position: absolute;
-        top: -6px;
-        left: -5px;
+        top: -0.06rem;
+        left: -0.05rem;
         border-top: 1.5vw solid #fff;
         border-left: 1.5vw solid transparent;
         transform: rotate(135deg);
@@ -142,24 +142,21 @@ export default {
  }
  .fill-up{
      display: flex;
-     padding: 8px 0px;
+     padding: 0.08rem 0rem;
      justify-content: center;
-     font-size: 20px;
-     margin-top: 15px;
+     font-size: 0.20rem;
+     margin-top: 0.15rem;
      .fill-up-left{
          display: flex;
      }
      .fill-up-right{
          margin-left: 10vw;
-         span i{
-
-         }
      }
  }
  .notice{
     color: #999;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 0.20rem;
     width: 80vw;
     margin: auto;
     white-space: nowrap;

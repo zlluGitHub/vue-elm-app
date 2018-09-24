@@ -54,13 +54,13 @@ export default {
 <style lang="scss" scoped>
 .count{
 
-    margin-left: 0.50px;
+    margin-left: 0.50rem;
     display: flex;
-    width: 3.00px;
+    width: 3.00rem;
     position: relative;
     span{
-        width: 0.45px;
-        height: 0.45px;    
+        width: 0.45rem;
+        height: 0.45rem;    
     }
     span.span1{
         position: absolute;
@@ -68,9 +68,9 @@ export default {
             background-size: contain;
     }
     span.span2{
-        margin-left: 0.60px;
-        font-size: 0.32px;
-        padding-top:0.05px;
+        margin-left: 0.60rem;
+        font-size: 0.32rem;
+        padding-top:0.05rem;
         text-align: center; 
     }
     span.span3{

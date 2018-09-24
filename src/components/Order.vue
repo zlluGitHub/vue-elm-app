@@ -93,7 +93,7 @@ export default {
     //     this.$nextTick(() => { 
     //         const element = this.$refs.warpInner;
     //         const liWidth = element.children[1].offsetWidth        
-    //         element.style.width= element.children.length*liWidth+'px';
+    //         element.style.width= element.children.length*liWidth+'rem';
     //         new Bscroll(this.$refs.wrapper, {
     //             scrollX:true,
     //             click:true
@@ -106,26 +106,26 @@ export default {
 
 <style lang="scss" scoped>
 .order{
-    margin: 0px;
-    margin-top: 12px;
+    margin: 0rem;
+    margin-top: 0.12rem;
     
     .badder{
-        padding: 0px 30px;
+        padding: 0rem 0.30rem;
     }
     .badder img{
         display: block;
-        border-radius: 12px;
+        border-radius: 0.12rem;
         width: 100%;
         
     }
     .recommend{
         color: #333;
-        font-size: 30px;
+        font-size: 0.30rem;
         font-weight: 700;
-        padding: 30px;
+        padding: 0.30rem;
     }
     .recommend-wrap{
-        margin-bottom: 24px;
+        margin-bottom: 0.24rem;
         width: 100%;
         overflow: hidden;
     }
@@ -133,8 +133,8 @@ export default {
         display: flex; 
         flex-wrap:wrap;
         .inner{
-            padding: 0px 8px;
-            width: 240px;
+            padding: 0rem 0.08rem;
+            width: 2.40rem;
         }
         .inner img{
             width: 100%;
@@ -142,8 +142,8 @@ export default {
         .inner>div{
             p:nth-child(1){
                 color: #333;
-                font-size: 28px;
-                padding: 8px 0;
+                font-size: 0.28rem;
+                padding: 0.08rem 0;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
@@ -151,7 +151,7 @@ export default {
             }
             p:nth-child(2){
                 color: #999;
-                font-size: 25px;
+                font-size: 0.25rem;
                 font-weight: 400;
             }
             div{
@@ -160,12 +160,12 @@ export default {
                 span:nth-child(1){
                    color: rgb(255, 83, 57);
                    font-weight: 400;
-                   font-size: 32px;
+                   font-size: 0.32rem;
                 }
                 span:nth-child(2){
-                    width: 45px;
-                    height: 45px;
-                    background: url('../../assets/img/jia.png') 0px 0px no-repeat;
+                    width: 0.45rem;
+                    height: 0.45rem;
+                    background: url('../../assets/img/jia.png') 0rem 0rem no-repeat;
                     background-size: contain;
                 }
             }

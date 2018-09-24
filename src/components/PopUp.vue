@@ -33,8 +33,8 @@ export default {
 <style lang="scss" scoped>
 .popup-box{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0rem;
+    left: 0rem;
     width: 100%;
     height: 100%;
     flex-direction: column;
@@ -46,9 +46,9 @@ export default {
     .popup-inner{
         width: 80%;
         background-color: #fff;
-        border-radius: 12px;
+        border-radius: 0.12rem;
         h2{
-            font-size: 42px;
+            font-size: 0.42rem;
             text-align: center;
            color: #000;
         }
@@ -56,7 +56,7 @@ export default {
             display: flex;
             justify-content: space-around;
            li{
-               // width: 70px;
+               // width: 70rem;
                display: flex;
                flex-direction: column;
 
@@ -64,10 +64,10 @@ export default {
                align-items: center;
                 font-weight: 600;
                 color: #333;
-                font-size: 30px;
+                font-size: 0.30rem;
                 span{
-                    padding-top: 12px;
-                    font-size: 20px;
+                    padding-top: 0.12rem;
+                    font-size: 0.20rem;
                     color: #999;
                 }
                 
@@ -76,32 +76,32 @@ export default {
         }
         >div{
             background-image: linear-gradient(90deg,#fff,#333 50%,#fff);
-            background-size: 100% 1px;
+            background-size: 100% 0.01rem;
             text-align: center;
-            font-size: 20px;
+            font-size: 0.20rem;
             margin: 4.8vw auto 2.666667vw;
             width: 20.266667vw;
             background-position: 50%;
             background-repeat: no-repeat;
             span{
-                padding: 10px;
-                font-size: 24px;
+                padding: 0.10rem;
+                font-size: 0.24rem;
                  color: #999;
                 background-color: #fff;
             }
         }
         >p{
-            font-size: 24px;
+            font-size: 0.24rem;
             color: #000;
             text-align: center;
-            padding-bottom:50px; 
+            padding-bottom:0.50rem; 
         }
     }
     >span{
-        width: 60px;
-        height: 60px;
+        width: 0.60rem;
+        height: 0.60rem;
         background-color: #000;
-        margin-top:80px; 
+        margin-top:0.80rem; 
         background: url('../../assets/img/qw1.webp') center center no-repeat;
     }
 }

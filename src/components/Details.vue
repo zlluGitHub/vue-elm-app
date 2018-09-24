@@ -12,6 +12,9 @@
                     <div><span>￥99</span><span>￥147</span><span>每单限1份优惠</span></div>
                     <p>套餐内含：热辣嫩牛芝心黑比萨*1份，浓情烤翅（4只）*1份，冰柠檬红茶*2份。</p>
                 </div>
+                <div class="count">
+                    
+                </div>
             </div>
         </div>
     </transition>
@@ -59,37 +62,37 @@ export default {
             }
             span{
                 position: absolute;
-                top: 20px;
-                right: 20px;
-                width: 75px;
-                height: 75px;
+                top: 0.20rem;
+                right: 0.20rem;
+                width: 0.75rem;
+                height: 0.75rem;
                 background:url('../../assets/img/qw1.webp') center center no-repeat;
                 background-size: 90%;
 
             }
         }
         .content{
-            padding: 0 30px;
+            padding: 0 0.30rem;
             color: #666;
             h2{
-                font-size: 38px;
+                font-size: 0.38rem;
                 color: #000;
                 font-weight: 700;
-                margin-bottom: 20px;
+                margin-bottom: 0.20rem;
             }
             p:nth-child(2){
-                margin-left: 12px;
-                font-size: 20px;
+                margin-left: 0.12rem;
+                font-size: 0.20rem;
             }
             div{
-                font-size: 22px;
+                font-size: 0.22rem;
                 span:nth-child(1){
                     color: red;
-                    font-size: 36px;
+                    font-size: 0.36rem;
                 }
                 span:nth-child(2){
-                    font-size: 26px;
-                    margin: 0px 12px;
+                    font-size: 0.26rem;
+                    margin: 0rem 0.12rem;
                     text-decoration:line-through;
                 }
                 span:nth-child(3){
@@ -98,19 +101,20 @@ export default {
                 }
             }
             p{
-                font-size: 20px;
-                margin-left: 8px;
+                font-size: 0.20rem;
+                margin-top: 0.12rem;
+                margin-left: 0.08rem;
             }
         }
     }
     }
     
 .an-detail-enter-active, .an-detail-leave-active {
-  transform: translate(0px,0px); 
+  transform: translate(0rem,0rem); 
   transition: transform .5s;
 }
 .an-detail-enter, .an-detail-leave-to {
- transform: translate(0px,1200px); 
+ transform: translate(0rem,12.00rem); 
 }
 
 </style>

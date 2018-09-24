@@ -23,7 +23,7 @@
 <script>
 import PopUp from './PopUp.vue';
 import Activity from './Activity.vue';
-import $ from 'jquery'
+import $ from 'jquery';
 import Coupon from './Coupon.vue';
 import Details from "./Details";
 export default {
@@ -56,27 +56,28 @@ export default {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  margin-bottom:1.50rem;
   nav {
     width: 100%;
     ul {
-      padding: 15px 0px;
+      padding: 0.15rem 0rem;
       margin: 0;
       display: flex;
       list-style-type: none;
       justify-content: space-around;
-      border-bottom: 1px solid #f1f1f1;
+      border-bottom: 0.01rem solid #f1f1f1;
       li {
         display: flex;
         a {
-          padding: 6px 0px 6px;
+          padding: 0.06rem 0rem 0.06rem;
           color: #666;
           font-weight: 400;
           font-size: 3.8vw;
-          border-bottom: 2px solid #fff;
+          border-bottom: 0.02rem solid #fff;
         }
         .active {
           color: #333;
-          border-bottom: 2px solid #2395ff;
+          border-bottom: 0.02rem solid #2395ff;
           font-weight: 700;
         }
       }
